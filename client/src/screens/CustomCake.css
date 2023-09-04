@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap'); 
+  body {  
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size:1rem;
+    font-weight:400;
+    line-height:1.5;
+    color:#212529;
+    text-align:left;
+  }  
+body { 
+/* CSS Variables that may have been missed get put on body */ 
+    --tw-border-opacity:  1;  
+    --tw-ring-inset:  var(--tw-empty,/*!*/ /*!*/);  
+    --tw-border-opacity:  1;  
+    --tw-ring-inset:  var(--tw-empty,/*!*/ /*!*/);  
+} 
+
+* { 
+    box-sizing: border-box; 
+    --tw-border-opacity: 1; 
+    border-color: rgba(229,231,235,var(--tw-border-opacity));
+} 
+
+* { 
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/); 
+} 
+
+.corporatepage { 
+    padding-top: 8em; 
+    background-color: #fbfbfd;
+} 
+
+#bakingoApp { 
+    overflow-x: clip; 
+    overflow-y: clip;
+} 
+
+body { 
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+    font-size: 1rem; 
+    font-weight: 400; 
+    line-height: 1.5; 
+    color: #212529; 
+    text-align: left; 
+    background-color: #fff;
+} 
+
+body { 
+    margin: 0; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+} 
+
+body { 
+    font-family: "Poppins",sans-serif;
+} 
+
+html { 
+    font-family: sans-serif; 
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
+    -webkit-tap-highlight-color: transparent;
+} 
+
+:root { 
+    --toastify-color-info: #3498db; 
+    --toastify-color-success: #07bc0c; 
+    --toastify-color-warning: #f1c40f; 
+    --toastify-color-error: #e74c3c; 
+    --toastify-icon-color-info: var(--toastify-color-info); 
+    --toastify-icon-color-success: var(--toastify-color-success); 
+    --toastify-icon-color-warning: var(--toastify-color-warning); 
+    --toastify-icon-color-error: var(--toastify-color-error); 
+    --toastify-color-progress-info: var(--toastify-color-info); 
+    --toastify-color-progress-success: var(--toastify-color-success); 
+    --toastify-color-progress-warning: var(--toastify-color-warning); 
+    --toastify-color-progress-error: var(--toastify-color-error);
+} 
+
+.corporate-banner { 
+    padding: 30px; 
+    justify-content: center; 
+    width: 100%; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    display: flex; 
+    background-image: linear-gradient(90deg,#ef5350,#ef5350,#ef9a9a 65%,#ef5350); 
+    background-repeat-x: no-repeat; 
+    background-repeat-y: no-repeat;
+} 
+
+*,:after,:before { 
+    box-sizing: border-box; 
+    --tw-border-opacity: 1; 
+    border-color: rgba(229,231,235,var(--tw-border-opacity));
+} 
+
+*,:after,:before { 
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/); 
+} 
+
+:-webkit-scrollbar { 
+    width: 14px;
+} 
+
+@media only screen and (min-width: 768px){ 
+  :-webkit-scrollbar { 
+    width: 14px;
+  } 
+
+  :-webkit-scrollbar-thumb { 
+    background: #d3d3d3; 
+    border-radius: 15px;
+  } 
+
+  :-webkit-scrollbar-track { 
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 0;
+  } 
+}     
+
+.corporate-banner-text { 
+    color: #fff;
+} 
+
+.image-form { 
+    display: flex; 
+    align-items: center; 
+    padding-top: 1%; 
+    width: 100%;
+} 
+
+#customised-background { 
+    background-image: url(https://bkmedia.bakingo.com/ssr-static/flavours_bg.png); 
+    object-fit: contain; 
+    background-size: cover; 
+    background-position-y: bottom;
+} 
+
+.form-submit { 
+    padding-left: 5%; 
+    width: 45%;
+} 
+
+h1 { 
+    margin-top: 0; 
+    margin-bottom: .5rem;
+} 
+
+h1 { 
+    margin-bottom: .5rem; 
+    font-weight: 500; 
+    line-height: 1.2;
+} 
+
+h1 { 
+    font-size: 2.5rem;
+} 
+
+.corporate-banner-heading { 
+    opacity: .97; 
+    font-size: 36px; 
+    line-height: 1.41; 
+    letter-spacing: .35px;
+} 
+
+.corporate-banner-heading { 
+    font-family: Poppins,sans-serif; 
+    font-weight: 400; 
+    font-stretch: normal; 
+    font-style: normal; 
+    text-align: center; 
+    color: #fff;
+} 
+
+.header-form { 
+    font-family: Poppins,sans-serif; 
+    font-size: 33px; 
+    line-height: 1.2; 
+    text-align: left; 
+    color: #251d34; 
+    margin-bottom: 30px;
+} 
+
+.image-spoon-customised { 
+    width: 46%; 
+    height: 480px; 
+    object-fit: contain; 
+    padding-left: 8%;
+} 
+
+img { 
+    border-style: none;
+} 
+
+img { 
+    vertical-align: middle;
+} 
+
+.commonImageContainer img  { 
+    width: 100%; 
+    height: 100%;
+} 
+
+.form-row { 
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-right: -5px; 
+    margin-left: -5px;
+} 
+
+.css-79elbk { 
+    position: relative;
+} 
+
+.col-md-6 { 
+    position: relative; 
+    width: 100%; 
+    padding-right: 15px; 
+    padding-left: 15px;
+} 
+
+@media (min-width: 768px){ 
+  .col-md-6 { 
+    flex: 0 0 50%; 
+    max-width: 50%;
+  } 
+}     
+
+.form-group { 
+    margin-bottom: 1rem;
+} 
+
+.form-row > [class*="col-"]  { 
+    padding-right: 5px; 
+    padding-left: 5px;
+} 
+
+.col-md-12 { 
+    position: relative; 
+    width: 100%; 
+    padding-right: 15px; 
+    padding-left: 15px;
+} 
+
+@media (min-width: 768px){ 
+  .col-md-12 { 
+    flex: 0 0 100%; 
+    max-width: 100%;
+  } 
+}     
+
+.position { 
+    position: static;
+} 
+
+input { 
+    margin: 0; 
+    font-family: inherit; 
+    font-size: inherit; 
+    line-height: inherit;
+} 
+
+input { 
+    overflow: visible;
+} 
+
+input { 
+    font-family: "Poppins",sans-serif; 
+    outline: 0;
+} 
+
+[type="submit"] { 
+    -webkit-appearance: button;
+} 
+
+.submit-form { 
+    font-size: 16px;
+} 
+
+.submit-form { 
+    width: 100%; 
+    height: 56px; 
+    border-radius: 6px; 
+    color: #fff; 
+    background-color: #ff5f5d; 
+    font-family: Poppins,sans-serif; 
+    border: 1px solid #f35c5c;
+} 
+
+[type="submit"]:not(:disabled) { 
+    cursor: pointer;
+} 
+
+label { 
+    font-weight: 600;
+} 
+
+label { 
+    margin-bottom: .5rem; 
+    font-size: 14px; 
+    font-weight: 500; 
+    color: #251d34;
+} 
+
+label { 
+    font-family: Poppins,sans-serif;
+} 
+
+label { 
+    display: inline-block; 
+    opacity: .6;
+} 
+
+.form-control { 
+    display: block; 
+    width: 100%; 
+    height: calc(1.5em + .75rem + 2px); 
+    padding: .375rem .75rem; 
+    font-size: 1rem; 
+    font-weight: 400; 
+    line-height: 1.5; 
+    color: #495057; 
+    background-color: #fff; 
+    background-clip: padding-box; 
+    border: 1px solid #ced4da; 
+    border-radius: .25rem; 
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+} 
+
+.form-control-sm { 
+    height: calc(1.5em + .5rem + 2px); 
+    padding: .25rem .5rem; 
+    font-size: .875rem; 
+    line-height: 1.5; 
+    border-radius: .2rem;
+} 
+
+.sizeFixed { 
+    font-size: 18px;
+} 
+
+[type="text"] { 
+    -webkit-appearance: none; 
+    appearance: none; 
+    background-color: #fff; 
+    border-color: #888; 
+    border-width: 1px; 
+    border-radius: 0; 
+    padding: .5rem .75rem; 
+    font-size: 1rem; 
+    line-height: 1.5rem;
+} 
+
+input[type="text"].sizeFixed { 
+    font-size: 18px;
+} 
+
+[type="email"] { 
+    -webkit-appearance: none; 
+    appearance: none; 
+    background-color: #fff; 
+    border-color: #888; 
+    border-width: 1px; 
+    border-radius: 0; 
+    padding: .5rem .75rem; 
+    font-size: 1rem; 
+    line-height: 1.5rem;
+} 
+
+input[type="email"].sizeFixed { 
+    font-size: 18px;
+} 
+
+.customised-label { 
+    opacity: .6; 
+    font-weight: 600; 
+    color: #251d34;
+} 
+
+.customised-label { 
+    font-family: Poppins,sans-serif; 
+    font-size: 14px;
+} 
+
+.customised-fileset { 
+    font-family: Poppins,sans-serif; 
+    font-size: 14px;
+} 
+
+.customised-fileset { 
+    border: 1px solid #ced4da; 
+    margin-top: 10px; 
+    background-color: #fff; 
+    height: calc(1.5em + .5rem + 8px); 
+    padding: .44rem 1.25rem; 
+    border-radius: 4px; 
+    opacity: inherit; 
+    cursor: pointer; 
+    font-weight: 400; 
+    text-align: left; 
+    color: #000; 
+    margin-bottom: 0;
+} 
+
+textarea { 
+    margin: 0; 
+    font-family: inherit; 
+    font-size: inherit; 
+    line-height: inherit;
+} 
+
+textarea { 
+    overflow: auto; 
+    resize: vertical;
+} 
+
+textarea { 
+    -webkit-appearance: none; 
+    appearance: none; 
+    background-color: #fff; 
+    border-color: #888; 
+    border-width: 1px; 
+    border-radius: 0; 
+    padding: .5rem .75rem; 
+    font-size: 1rem; 
+    line-height: 1.5rem;
+} 
+
+.message-sizeFixed { 
+    font-size: 16px;
+} 
+
+textarea.form-control { 
+    height: auto;
+} 
+
+.form-required { 
+    color: red;
+} 
+
+[type="file"] { 
+    background: unset; 
+    border-color: inherit; 
+    border-width: 0; 
+    border-radius: 0; 
+    padding: 0; 
+    font-size: unset; 
+    line-height: inherit;
+} 
+
+label > input[type="file"]  { 
+    display: none;
+} 
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-x55Wz.style-x55Wz {  
+   width: 100%;  
+    height: 100%;  
+}  
+#style-XLGT2.style-XLGT2 {  
+   display: inline;  
+    border-radius: 5px;  
+}  
+#style-3rlCI.style-3rlCI {  
+   width: 100%;  
+    margin-bottom: 15px;  
+}  
