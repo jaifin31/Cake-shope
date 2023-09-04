@@ -28,30 +28,43 @@ const NavBar = () => {
             <Nav className="ms-auto">
               <LinkContainer to="/" activeClassName="">
                 <Nav.Link > <img
-                    src="images/hlogo.png"
+                    src="images/hlogo.gif"
                     alt="Logo"
-                    style={{ height: '15px' }}
+                    style={{ height: '25px', marginBottom:'7px' }}
                   />Home</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/about" activeClassName="">
                 <Nav.Link> <img
-                    src="images/alogo.png"
+                    src="images/alogo.gif"
                     alt="Logo"
-                    style={{ height: '20px' }}
+                    style={{ height: '25px',marginBottom:'7px' }}
                   />About Us</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/contact" activeClassName="">
-                <Nav.Link>Contact Us</Nav.Link>
+                <Nav.Link><img
+                    src="images/cllogo1.gif"
+                    alt="Logo"
+                    style={{ height: '25px',width:'33px',marginBottom:'7px' }}
+                  />Contact Us</Nav.Link>
               </LinkContainer>
-             
+              <LinkContainer to="/cart">
+                <Nav.Link>
+                  <img
+                    src="images/clogo.gif"
+                    alt="Logo"
+                    style={{ height: '25px', marginBottom:'7px' }}
+                  />Cart{' '}
+                  {cartState.cartItems.length}
+                </Nav.Link>
+              </LinkContainer>
               {currentUser ? (
                 <LinkContainer to="/">
                   <NavDropdown title={currentUser.name} id="basic-nav-dropdown">
                     <LinkContainer to="/orders">
                       <NavDropdown.Item> <img
-                    src="images/ologo.png"
+                    src="images/ologo.gif"
                     alt="Logo"
-                    style={{ height: '22px' }}
+                    style={{ height: '25px' }}
                   />Orders</NavDropdown.Item>
                     </LinkContainer>
                     <NavDropdown.Item
@@ -59,9 +72,9 @@ const NavBar = () => {
                         dispatch(logoutUser())
                       }}
                     > <img
-                    src="images/ulogo.png"
+                    src="images/ulogo.gif"
                     alt="Logo"
-                    style={{ height: '22px' }}
+                    style={{ height: '25px' }}
                   />
                       Logout
                     </NavDropdown.Item>
@@ -71,26 +84,20 @@ const NavBar = () => {
                 <>
                   <LinkContainer to="/login">
                     <Nav.Link> <img
-                    src="images/clogo.png"
+                    src="images/ilogo.gif"
                     alt="Logo"
-                    style={{ height: '22px' }}
+                    style={{ height: '30px' }}
                   />Login</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/register">
-                    <Nav.Link>Register</Nav.Link>
+                    <Nav.Link><img
+                    src="images/rglogo.gif"
+                    alt="Logo"
+                    style={{ height: '33px' }}
+                  />Register</Nav.Link>
                   </LinkContainer>
                 </>
               )}
-              <LinkContainer to="/cart">
-                <Nav.Link>
-                  <img
-                    src="images/clogo.png"
-                    alt="Logo"
-                    style={{ height: '22px' }}
-                  />Cart{' '}
-                  {cartState.cartItems.length}
-                </Nav.Link>
-              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>
