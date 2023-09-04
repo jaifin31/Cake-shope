@@ -189,7 +189,7 @@ const ProductDetail = ({ item }) => {
               <Row>
                 <Col md={6}>
                   <h6>Flavors</h6>
-                  <select
+                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
                     value={varient}
                     onChange={(e) => setVarient(e.target.value)}
                   >
@@ -200,7 +200,7 @@ const ProductDetail = ({ item }) => {
                 </Col>
                 <Col md={6}>
                   <h6>KG</h6>
-                  <select
+                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
                     value={quantity}
                     onChange={(e) => setQuantity(e.target.value)}
                   >
