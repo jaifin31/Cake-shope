@@ -1,13 +1,14 @@
 import React from 'react'
 import './ProductDetail.css'
 import { useState } from 'react'
-import { Row, Col, Button } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { addToCart } from '../actions/cartAction'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
 const ProductDetail = ({ item }) => {
-  const [varient, setVarient] = useState(item[0].varients[0]) // replace with your initial value
+ //  const [varient, setVarient] = useState(item[0].varients[0]) replace with your initial value
+  const [varient, setVarient] = useState(item && item[0] && item[0].varients[0] ? item[0].varients[0] : ''); // replace with your initial value
   const [quantity, setQuantity] = useState(1)
 
   const dispatch = useDispatch()
@@ -19,7 +20,7 @@ const ProductDetail = ({ item }) => {
     history.push('/cart')
   }
 
-  const { varients, prices } = item[0]
+  //  const { varients, prices } = item[0]
   console.log(item)
   return (
     <div className="rowContainer snipcss-wKzwA">
@@ -86,30 +87,30 @@ const ProductDetail = ({ item }) => {
                 <ul className="image-big desktop-image-zoom zoom-slide">
                   <div id="style-1xHsa" className="style-1xHsa">
                     <img
-                      src={item[0].image}
+                      src={item && item[0] && item[0].image ? item[0].image : ''}
                       id="style-8nwKy"
                       className="style-8nwKy"
                     />
-                    <div
+                    {/* <div
                       className="js-image-zoom__zoomed-area style-HNHon"
                       id="style-HNHon"
-                    ></div>
-                    <div
+                    ></div> */}
+                    {/* <div
                       className="js-image-zoom__zoomed-image style-bgboR"
                       id="style-bgboR"
-                    ></div>
+                    ></div> */}
                   </div>
                 </ul>
               </div>
             </div>
-            <div></div>
           </div>
         </div>
         <div className="columnContainerContent">
           <div className="wishicon-position">
             <div className="details-eggles">
               <h1 className="product-heading " itemprop="name">
-                {item[0].name}
+                {/* {item[0].name} */}
+                {item && item[0] && item[0].name ? item[0].name : ''}
               </h1>
             </div>
             <div className="wish-icon">
@@ -123,17 +124,16 @@ const ProductDetail = ({ item }) => {
               </div>
             </div>
           </div>
-          <div className="details-seperator"></div>
-          <div className="product-review-covid ">
-            <div className="product-number-review">
+          {/* <div className="product-review-covid ">
+            <div className="product-number-review"> */}
               <div className="star-number">
                 <div className="rating-number">5</div>★
               </div>
               <div className="product-review">
                 <a>18 Reviews</a>
               </div>
-            </div>
-          </div>
+            {/* </div>
+          </div> */}
           <div className="price-content">
             <span
               className="product-price"
@@ -152,34 +152,45 @@ const ProductDetail = ({ item }) => {
               className="priceCurrencyIcon"
             ></span>
             <span itemprop="price" content="775">
-              <Col md={6}>Price ${item[0].prices[0][varient] * quantity}/-</Col>
-              <Col md={6} />
-              {/* <Button
-                onClick={addToCartHandler}
-                className="bg-warning text-white"
-              /> */}
-              {/* </Col> */}
-              {/* </span> */}
+              <Col md={6}>
+                {item && item[0] && item[0].prices && item[0].prices[0] && varient
+                  ? `Price ₹${item[0].prices[0][varient] * quantity}/-`
+                  : ''}
+              </Col>
               <meta
                 itemprop="https://schema.org/priceValidUntil"
                 content="Mon Aug 12 2024 12:15:11 GMT+0530 (India Standard Time)"
               />
             </span>
-            <span className="gst-content">(Inclusive of GST)</span>
+            {/* <span className="gst-content">(Inclusive of GST)</span> */}
           </div>
           <div id="style-vDEea" className="style-vDEea">
-            <h3 className="cont-prod">Category</h3>
+            {/* <h3 className="cont-prod">Category</h3>
             <li id="style-XGqah" className="style-XGqah">
               <div className="product-contain">
                 <div className="product-contains-dot"></div>
                 {item[0].category}
               </div>
-            </li>
+            </li> */}
+            {item && item[0] && item[0].category ? (
+              <>
+                <h3 className="cont-prod">Category</h3>
+                <li id="style-XGqah" className="style-XGqah">
+                  <div className="product-contain">
+                    <div className="product-contains-dot"></div>
+                    {item[0].category}
+                  </div>
+                </li>
+              </>
+            ) : (
+              // Handle the case where item or category is not available
+              <p>Category not available</p>
+            )}
           </div>
-          <div className="weight-heading">
+          {/* <div className="weight-heading">
             Select Weight
             <span className="serving-info">Serving info</span>
-          </div>
+          </div> */}
           <div className="select-all-weight-box">
             {/* <div className="selectedWeightContainerBox">0.5 Kg</div>
             <div className="weightContainerBox">1 Kg</div>
@@ -189,7 +200,10 @@ const ProductDetail = ({ item }) => {
               <Row>
                 <Col md={6}>
                   <h6>Flavors</h6>
-                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                  {item && item[0] && item[0].varients && (
+                  <select
+                    className="form-select form-select-lg mb-3"
+                    aria-label=".form-select-lg example"
                     value={varient}
                     onChange={(e) => setVarient(e.target.value)}
                   >
@@ -197,6 +211,7 @@ const ProductDetail = ({ item }) => {
                       <option key={varient}>{varient}</option>
                     ))}
                   </select>
+                )}
                 </Col>
                 <Col md={6}>
                   <h6>KG</h6>
@@ -240,7 +255,7 @@ const ProductDetail = ({ item }) => {
             </div>
             {/* <div className="d only-buy-now ">Buy Now</div> */}
           </div>
-          <div className="flex mt-7 sm:mt-0 style-o2R7o" id="style-o2R7o">
+          {/* <div className="flex mt-7 sm:mt-0 style-o2R7o" id="style-o2R7o">
             <div className="time-smile w-full rounded-none md:w-11/12 lg:w-4/5 rounded-lg flex">
               <div className="flex flex-col md:flex-row">
                 <div className="thumb-image">
@@ -258,13 +273,18 @@ const ProductDetail = ({ item }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div>
             <div className="product-description-city">
               <div className="product-heading-card">Product Description</div>
-              <div className="product-description" itemprop="description">
+              {/* <div className="product-description" itemprop="description">
               {item[0].description}
-              </div>
+              </div> */}
+              {item && item[0] && item[0].description && (
+                <div className="product-description" itemprop="description">
+                  {item[0].description}
+                </div>
+              )}
               <meta itemprop="sku" content="them2272flav" />
               <meta itemprop="mpn" content="them2272flav" />
             </div>

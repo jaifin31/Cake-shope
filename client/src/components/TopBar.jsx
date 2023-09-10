@@ -1,25 +1,26 @@
 import React from 'react'
 import { Navbar, Image} from 'react-bootstrap'
-import NavBar from './NavBar';
 import './TopBar.css';
+// import Slider from 'react-slick';
 
 const TopBar = () => {
   return (
     <>
    
       <div className="header">
-      {/* <Navbar.Brand>
-            <Image
-              src="images/logo1.png"
+      <Image
+              src="/images/logo3.png"
               alt="logo"
-              style={{ height: '250px',width:'300px' }}
+              style={{ height: '80px' , width:'300px',padding:"5px", marginLeft:'10px' }}
             />
-          </Navbar.Brand> */}
-      {/* <h1 className="project-name">The Cake Gallery</h1> */}
-      <NavBar/>
+          <div className="text-content">
+          <h2>A Slice of Heaven,<br/> Welcome to The Cake Gallery</h2><br/>
+          {/* <p style={{fontSize:"22px"}}>Perfect for any occasion or a sweet escape, our cakes create moments to treasure. <br/>
+            </p> */}
+        </div>
     </div>
     </>
   )
 }
-
+ 
 export default TopBar

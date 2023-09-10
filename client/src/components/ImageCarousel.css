@@ -1,0 +1,16 @@
+/* ImageCarousel.css */
+.carousel-container {
+    max-width: 800px; /* Adjust the container width as needed */
+    margin: 0 auto;
+    /* height: 10px; */
+    
+  }
+  
+  .slick-slide img {
+    /* background-color: rgb(255, 255, 255); */
+    width: 100%;
+    height: auto;
+    border-radius: 45px;
+    padding: 30px; 
+  }
+  

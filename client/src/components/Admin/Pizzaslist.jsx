@@ -27,7 +27,7 @@ const Pizzaslist = () => {
             <thead>
               <tr>
                 <th>Image</th>
-                <th>Pizza Name</th>
+                <th>Cake Name</th>
                 <th>Prices</th>
                 <th>Category</th>
                 <th>Action</th>

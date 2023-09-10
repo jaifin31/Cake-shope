@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
@@ -7,7 +7,7 @@ import Pizza from "../components/Pizza";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import Filters from "../components/Filters";
-import '../bg.css'
+
 
 const HomeScreen = ({setItem}) => {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const HomeScreen = ({setItem}) => {
   }, [dispatch]);
 
   return (
-    <div className="page-background">
+    <div>
       <Container>
         {loading ? (
           <Loader />

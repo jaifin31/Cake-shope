@@ -18,6 +18,9 @@ const userSchema = mongoose.Schema(
       type: String,
       required: [true, "Password is Required"],
     },
+    address:{
+      type:String
+    },
     isAdmin: {
       type: Boolean,
       default: false,

@@ -5,7 +5,7 @@ import TopBar from './components/TopBar'
 import About from './components/About'
 import Contact from './components/Contact'
 import Policy from './components/Policy'
-//import NavBar from './components/NavBar'
+import NavBar from './components/NavBar'
 import HomeScreen from './screens/HomeScreen'
 import CartScreen from './screens/CartScreen'
 import Registe from './screens/Registe'
@@ -14,6 +14,10 @@ import OrderScreen from './screens/OrderScreen'
 import AdminScreen from './screens/AdminScreen'
 import ProductDetail from './screens/ProductDetail'
 import CustomCake from './screens/CustomCake'
+import UserProfile from './screens/UserProfile'
+import Footer from './components/Footer'
+
+
 
 function App() {
   const [item, setItem] = useState([])
@@ -21,21 +25,23 @@ function App() {
 
   return (
     <BrowserRouter>
-      <TopBar />
-     {/*  <NavBar /> */}
+       <TopBar /> 
       <Switch>
         <Route path="/admin" component={AdminScreen} />
-        <Route path="/orders" component={OrderScreen} exact />
-        <Route path="/login" component={Login} exact />
-        <Route path="/register" component={Registe} exact />
-        <Route path="/cart" component={CartScreen} exact />
-        <Route path="/about" component={About} exact />
-        <Route path="/contact" component={Contact} exact />
-        <Route path="/policy" component={Policy} exact />
-        <Route path="/productdetail" exact ><ProductDetail item={item} /></Route>
-        <Route path="/customcake" component={CustomCake} exact />
-        <Route path="/" ><HomeScreen setItem={setItem}/> </Route>
+        <Route path="/orders"  exact ><NavBar /><OrderScreen /></Route>
+        <Route path="/login"  exact ><NavBar /><Login /></Route>
+        <Route path="/userprofile"  exact ><NavBar /><UserProfile /></Route>
+        <Route path="/userprofile"exact ><NavBar /><UserProfile/></Route>
+        <Route path="/register"  exact ><NavBar /><Registe/></Route>
+        <Route path="/cart"exact ><NavBar /><CartScreen /></Route>
+        <Route path="/about" exact ><NavBar /><About /></Route>
+        <Route path="/contact" ><NavBar /><Contact /></Route>
+        <Route path="/policy"  exact ><NavBar /><Policy /></Route>
+        <Route path="/productdetail" exact ><NavBar/><ProductDetail item={item} /></Route>
+        <Route path="/customcake" exact ><NavBar /><CustomCake /></Route>
+        <Route path="/" ><NavBar /><HomeScreen setItem={setItem}/> </Route>
       </Switch>
+      <Footer/>
     </BrowserRouter>
   )
 }

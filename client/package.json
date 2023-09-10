@@ -13,15 +13,20 @@
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
+    "react-file-base64": "^1.0.3",
     "react-icons": "^4.10.1",
+    "react-modal": "^3.16.1",
     "react-redux": "^7.2.9",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^2.1.8",
+    "react-simple-star-rating": "^5.1.7",
+    "react-slick": "^0.29.0",
     "react-stripe-checkout": "^2.6.3",
     "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.2",
+    "slick-carousel": "^1.8.1",
     "sweetalert": "^2.1.2",
     "web-vitals": "^1.0.1"
   },
@@ -50,7 +55,17 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.22.17",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.22.15",
+    "@types/react-modal": "^3.16.0",
     "@types/react-router-dom": "^5.3.3",
     "@types/redux-thunk": "^2.1.0"
-  }
+  },
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
+  ]
 }

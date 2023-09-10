@@ -54,6 +54,15 @@ router.get('/getallusers', async (req, res) => {
     res.status(404).json({ message: error.stack })
   }
 })
+router.get('/getuser/:id', async (req, res) => {
+  try {
+    const {id}=req.params;
+    const user = await User.findById(id)
+    res.status(200).send(user)
+  } catch (error) {
+    res.status(404).json({ message: error.stack })
+  }
+})
 
 router.post('/deleteuser', async (req, res) => {
   const userid = req.body.userid
