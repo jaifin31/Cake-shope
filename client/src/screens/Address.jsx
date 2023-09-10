@@ -116,7 +116,7 @@ export default function Address({ showAddress, setShowAddress }) {
           <button type="submit">Save Address</button>
         </form> */}
         <button className="btn btn-secondary" onClick={closeModal}>
-          Close
+          Place Order
         </button>
       </Modal>
     </div>
