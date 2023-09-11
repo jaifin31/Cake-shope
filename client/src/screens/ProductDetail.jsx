@@ -37,7 +37,7 @@ const ProductDetail = ({ item }) => {
           </div>
           <div className="cake-images productimage-container">
             <meta
-              itemprop="image"
+              itemProp="image"
               content="https://bkmedia.bakingo.com/sq-happy-birthday-peppa-pig-poster-cake-them2272flav-A_0.jpg"
             />
             <div id="style-ZCHj9" className="style-ZCHj9">
@@ -90,6 +90,7 @@ const ProductDetail = ({ item }) => {
                       src={item && item[0] && item[0].image ? item[0].image : ''}
                       id="style-8nwKy"
                       className="style-8nwKy"
+                      alt='CakeImage'
                     />
                     {/* <div
                       className="js-image-zoom__zoomed-area style-HNHon"
@@ -108,7 +109,7 @@ const ProductDetail = ({ item }) => {
         <div className="columnContainerContent">
           <div className="wishicon-position">
             <div className="details-eggles">
-              <h1 className="product-heading " itemprop="name">
+              <h1 className="product-heading " itemProp="name">
                 {/* {item[0].name} */}
                 {item && item[0] && item[0].name ? item[0].name : ''}
               </h1>
@@ -124,41 +125,41 @@ const ProductDetail = ({ item }) => {
               </div>
             </div>
           </div>
-          {/* <div className="product-review-covid ">
-            <div className="product-number-review"> */}
+          {/* <div className="product-review-covid "> */}
+            <div className="product-number-review">
               <div className="star-number">
                 <div className="rating-number">5</div>★
               </div>
               <div className="product-review">
-                <a>18 Reviews</a>
+                <p>18 Reviews</p>
               </div>
-            {/* </div>
-          </div> */}
+            </div>
+          {/* </div> */}
           <div className="price-content">
             <span
               className="product-price"
-              itemprop="offers"
+              itemProp="offers"
               itemscope="true"
               itemtype="https://schema.org/Offer"
             />
-            <meta itemprop="availability" content="InStock" />
+            <meta itemProp="availability" content="InStock" />
             <meta
-              itemprop="url"
+              itemProp="url"
               content="https://www.bakingo.com/p/theme-cake/happy-birthday-peppa-pig-poster-cake-them2272flav/p/theme-cake/happy-birthday-peppa-pig-poster-cake-them2272flav"
             />
             <span
-              itemprop="priceCurrency"
+              itemProp="priceCurrency"
               content="INR"
               className="priceCurrencyIcon"
             ></span>
-            <span itemprop="price" content="775">
+            <span itemProp="price" content="775">
               <Col md={6}>
                 {item && item[0] && item[0].prices && item[0].prices[0] && varient
                   ? `Price ₹${item[0].prices[0][varient] * quantity}/-`
                   : ''}
               </Col>
               <meta
-                itemprop="https://schema.org/priceValidUntil"
+                itemProp="https://schema.org/priceValidUntil"
                 content="Mon Aug 12 2024 12:15:11 GMT+0530 (India Standard Time)"
               />
             </span>
@@ -277,21 +278,21 @@ const ProductDetail = ({ item }) => {
           <div>
             <div className="product-description-city">
               <div className="product-heading-card">Product Description</div>
-              {/* <div className="product-description" itemprop="description">
+              {/* <div className="product-description" itemProp="description">
               {item[0].description}
               </div> */}
               {item && item[0] && item[0].description && (
-                <div className="product-description" itemprop="description">
+                <div className="product-description" itemProp="description">
                   {item[0].description}
                 </div>
               )}
-              <meta itemprop="sku" content="them2272flav" />
-              <meta itemprop="mpn" content="them2272flav" />
+              <meta itemProp="sku" content="them2272flav" />
+              <meta itemProp="mpn" content="them2272flav" />
             </div>
           </div>
           <div className="seperator"></div>
           <div
-            itemprop="review"
+            itemProp="review"
             itemscope="true"
             itemtype="https://schema.org/Review"
           ></div>

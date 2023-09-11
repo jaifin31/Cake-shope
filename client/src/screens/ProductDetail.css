@@ -220,7 +220,7 @@ html {
     flex-direction: column; 
     width: 486px; 
     margin: 17px 0 45px; 
-    align-items: end;
+    align-items: flex-end;
 } 
 
 .buy-now-order-same { 
@@ -948,8 +948,8 @@ ul {
     position: relative; 
     overflow: hidden; 
     cursor: pointer; 
-    background-repeat-x: no-repeat, no-repeat; 
-    background-repeat-y: no-repeat, no-repeat;
+    /* background-repeat-x: no-repeat, no-repeat; 
+    background-repeat-y: no-repeat, no-repeat; */
 } 
 
 .ratingStar { 
@@ -1092,9 +1092,9 @@ p {
     position: relative; 
     overflow: hidden; 
     cursor: pointer; 
-    background-repeat-x: no-repeat, no-repeat; 
+    /* background-repeat-x: no-repeat, no-repeat; 
     background-repeat-y: no-repeat, no-repeat;
-} 
+}  */
 
 .zoom-slide .js-image-zoom__zoomed-area  { 
     border: 1px solid hsla(0,0%,66.7%,.7); 
@@ -1178,8 +1178,8 @@ p {
     background-image: url(https://media.bakingo.com/bakingo-ssr/static/media/maps-and-flags.33a8109f.svg); 
     background-repeat: no-repeat; 
     text-align: left; 
-    background-repeat-x: no-repeat; 
-    background-repeat-y: no-repeat;
+    /* background-repeat-x: no-repeat; 
+    background-repeat-y: no-repeat; */
 } 
 
 .area-pincode-parent .lcSearchCityBox .rectangle  { 
@@ -1406,4 +1406,4 @@ p {
 #style-PiQZj.style-PiQZj {  
    display: inline;  
     border-radius: 5px;  
-}  
+}} 

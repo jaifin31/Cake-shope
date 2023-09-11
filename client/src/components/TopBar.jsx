@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Image} from 'react-bootstrap'
+import {Image} from 'react-bootstrap'
 import './TopBar.css';
 // import Slider from 'react-slick';
 

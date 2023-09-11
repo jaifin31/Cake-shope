@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Modal from 'react-modal' // Import the Modal component
 // import './CustomCake.css';
 import './Address.css'
@@ -9,10 +9,10 @@ Modal.setAppElement('#root')
 export default function Address({ showAddress, setShowAddress }) {
   //   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    // setIsModalOpen(true);
-    setShowAddress(true)
-  }
+//   const openModal = () => {
+//     // setIsModalOpen(true);
+//     setShowAddress(true)
+//   }
 
   const closeModal = () => {
     // setIsModalOpen(false);

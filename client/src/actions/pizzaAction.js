@@ -54,21 +54,50 @@ export const deletePizza = (pizzaId) => async (dispatch) => {
   }
 };
 
+// export const filterPizza = (searchkey, category) => async (dispatch) => {
+//   let filterdPizza;
+//   dispatch({ type: "GET_PIZZAS_REQUEST" });
+//   try {
+//     const res = await axios.get("/api/pizzas/getAllPizzas");
+//     filterdPizza = res.data.filter((pizza) =>
+//       pizza.name.toLowerCase().includes(searchkey)
+//     );
+//     if (category !== "all") {
+//       filterdPizza = res.data.filter(
+//         (pizza) => pizza.category.toLowerCase() === category
+//       );
+//     }
+//     dispatch({ type: "GET_PIZZAS_SUCCESS", payload: filterdPizza });
+//   } catch (error) {
+//     dispatch({ type: "GET_PIZZAS_FAIL", payload: error });
+//   }
+// };
+// import axios from 'axios';
+
 export const filterPizza = (searchkey, category) => async (dispatch) => {
-  let filterdPizza;
   dispatch({ type: "GET_PIZZAS_REQUEST" });
+
   try {
     const res = await axios.get("/api/pizzas/getAllPizzas");
-    filterdPizza = res.data.filter((pizza) =>
-      pizza.name.toLowerCase().includes(searchkey)
-    );
-    if (category !== "all") {
-      filterdPizza = res.data.filter(
-        (pizza) => pizza.category.toLowerCase() === category
+    let filteredPizza = res.data;
+
+    // Apply search filter
+    if (searchkey) {
+      filteredPizza = filteredPizza.filter((pizza) =>
+        pizza.name.toLowerCase().includes(searchkey.toLowerCase())
       );
     }
-    dispatch({ type: "GET_PIZZAS_SUCCESS", payload: filterdPizza });
+
+    // Apply category filter
+    if (category !== "all") {
+      filteredPizza = filteredPizza.filter(
+        (pizza) => pizza.category.toLowerCase() === category.toLowerCase()
+      );
+    }
+
+    dispatch({ type: "GET_PIZZAS_SUCCESS", payload: filteredPizza });
   } catch (error) {
     dispatch({ type: "GET_PIZZAS_FAIL", payload: error });
   }
 };
+

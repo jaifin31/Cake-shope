@@ -1,24 +1,24 @@
 import React, { useState } from 'react'
-import { Card, Button, Row, Col, Modal } from 'react-bootstrap'
-import { useDispatch } from 'react-redux'
-import { addToCart } from '../actions/cartAction'
+import { Card, Row, Col, Modal } from 'react-bootstrap'
+// import { useDispatch } from 'react-redux'
+// import { addToCart } from '../actions/cartAction'
 import { useHistory } from 'react-router-dom'
 
 
 const Pizza = ({ pizza, setItem }) => {
-  const [varient, setVarient] = useState('Black Forest')
-  const [quantity, setQuantity] = useState(1)
+  const [varient] = useState('Black Forest')
+  const [quantity] = useState(1)
   const [show, setShow] = useState(false)
   const history = useHistory()
 
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
-  const addToCartHandler = () => {
-    dispatch(addToCart(pizza, quantity, varient))
-  }
+  // const addToCartHandler = () => {
+  //   dispatch(addToCart(pizza, quantity, varient))
+  // }
 
   const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
+  // const handleShow = () => setShow(true)
 
   const handleClick = () => {
     setItem([pizza])

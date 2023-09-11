@@ -38,7 +38,7 @@ export default function CustomCake() {
       {(!showAddress)?
       <>
       <div className="image-container">
-        <img src="/images/imgcc.jpg" alt="cake image" />
+        <img src="/images/imgcc.jpg" alt="cakeimage" />
       </div>
 
       <div className="contact-form">

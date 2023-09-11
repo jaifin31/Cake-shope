@@ -19,34 +19,34 @@ const ImageCarousel = () => {
     <div className="carousel-container">
       <Slider {...settings}>
         <div>
-          <img src="/images/img1.jpg" alt="Image 1" />
+          <img src="/images/img1.jpg" alt="Image1" />
         </div>
         <div>
-          <img src="/images/img2.jpg" alt="Image 2" />
+          <img src="/images/img2.jpg" alt="Image2" />
         </div>
         <div>
-          <img src="/images/img3.jpg" alt="Image 3" />
+          <img src="/images/img3.jpg" alt="Image3" />
         </div>
         <div>
-          <img src="/images/img4.jpg" alt="Image 4" />
+          <img src="/images/img4.jpg" alt="Image4" />
         </div>
         <div>
-          <img src="/images/img12.jpg" alt="Image 5" />
+          <img src="/images/img12.jpg" alt="Image5" />
         </div>
         <div>
-          <img src="/images/img16.jpg" alt="Image 6" />
+          <img src="/images/img16.jpg" alt="Image6" />
         </div>
         <div>
-          <img src="/images/img7.jpg" alt="Image 7" />
+          <img src="/images/img7.jpg" alt="Image7" />
         </div>
         <div>
-          <img src="/images/img8.jpg" alt="Image 8" />
+          <img src="/images/img8.jpg" alt="Image8" />
         </div>
         <div>
-          <img src="/images/img10.jpg" alt="Image 9" />
+          <img src="/images/img10.jpg" alt="Image9" />
         </div>
         <div>
-          <img src="/images/img15.jpg" alt="Image 10" />
+          <img src="/images/img15.jpg" alt="Image10" />
         </div>
         {/* Add more images as needed */}
       </Slider>
