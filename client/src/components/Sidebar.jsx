@@ -59,7 +59,14 @@ const Sidebar = () => {
                   Order List
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/">
+              <LinkContainer to="/admin/customorder" activeClassName="">
+                <Nav.Link > <img
+                    src="images/ccclogo.gif"
+                    alt="Logo"
+                    style={{ height: '25px', marginBottom:'7px' }}
+                  />Customs Orders</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/login">
                 <Nav.Link>
                   <img
                     src="images/ulogo.gif"

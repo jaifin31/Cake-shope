@@ -1,2 +1,83 @@
 sikret :sk_test_51NjEwGSBJhuyusNZYeVMCFKHebaPwB6yivlHef5GRBJ8goTXOC76cJIYZ2F6NY2k69d1d96EnLBr5accHAJ7ZtGD00wowX6YQa
 pk_test_51NjEwGSBJhuyusNZ2Oy1qqnkrS9n6xhPA8wVF4DzV0O2OMt3fxAsrioIOvfRdcrx7vhFwdjF1oJ9kZV9HFVTjqfV00wWUyCCVX
+
+
+import React, { useState, useEffect } from "react";
+import { Container, Form, Button } from "react-bootstrap";
+import { useDispatch, useSelector} from "react-redux";
+import { loginUser } from "../actions/userAction";
+import { useHistory } from "react-router-dom";
+
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("currentUser")) {
+  //     window.location.href = "/";
+  //   }
+  // }, []);
+  // const loginHandler = () => {
+  //   const user = { email, password };
+  //   dispatch(loginUser(user));
+  // };
+   useEffect(() => {
+    if (userInfo) {
+      // Check if the user is an admin based on their email address
+      if (userInfo.email === "jaifin@gmail.com") {
+        history.push("/admin"); // Redirect to the admin panel
+      } else {
+        history.push("/"); // Redirect to the home page or user dashboard
+      }
+    }
+  }, [history, userInfo]);
+
+  const loginHandler = () => {
+    const user = { email, password };
+    dispatch(loginUser(user));
+  };
+  return (
+    <>
+      <Container>
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter email"
+            />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group>
+          <Button variant="primary" onClick={loginHandler}>
+            Login
+          </Button>
+        </Form>
+      </Container>
+    </>
+  );
+};
+
+export default Login;

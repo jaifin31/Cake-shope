@@ -23,7 +23,7 @@ const ProductDetail = ({ item }) => {
   //  const { varients, prices } = item[0]
   console.log(item)
   return (
-    <div className="rowContainer snipcss-wKzwA">
+    <div className="rowContainer snipcss-wKzwA" style={{padding:'30px'}}>
       {/* ...other components */}
       {/* Add your JSX code for all the nested elements */}
       <div className="rowContainer snipcss-wKzwA">
@@ -92,14 +92,14 @@ const ProductDetail = ({ item }) => {
                       className="style-8nwKy"
                       alt='CakeImage'
                     />
-                    {/* <div
+                    <div
                       className="js-image-zoom__zoomed-area style-HNHon"
                       id="style-HNHon"
-                    ></div> */}
-                    {/* <div
+                    ></div> 
+                     <div
                       className="js-image-zoom__zoomed-image style-bgboR"
                       id="style-bgboR"
-                    ></div> */}
+                    ></div>
                   </div>
                 </ul>
               </div>
