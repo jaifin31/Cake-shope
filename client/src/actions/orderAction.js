@@ -66,3 +66,18 @@ export const deliverOrder = (orderid) => async (dispatch, getState) => {
     dispatch({ type: "GET_ALL_ORDER_FAIL", payload: error });
   }
 };
+
+export const addCustomCake = async(data) =>{
+  try {
+    const user=JSON.parse(localStorage.getItem('currentUser'))
+      return await fetch(`http://localhost:3000/api/orders/customcake`,{
+          method:"POST",
+          body: JSON.stringify(data),
+          headers:{
+              "Content-Type":"application/json"
+          },
+      })
+  } catch (error) {
+      console.log(error.message)
+  }
+}

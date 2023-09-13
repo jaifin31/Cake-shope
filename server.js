@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
+const bodyParser=require("body-parser");
 
 const connectDB = require("./config/config");
 require("colors");
@@ -14,6 +15,8 @@ connectDB();
 
 const app = express();
 
+app.use(bodyParser.json({limit:"30mb", extended: true}))
+app.use(bodyParser.urlencoded({limit:"30mb", extended: true}))
 //middlewares
 app.use(express.json());
 app.use(morgan("dev"));

@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Modal from 'react-modal' // Import the Modal component
 // import './CustomCake.css';
 import './Address.css'
+import { addCustomCake } from '../actions/orderAction';
 
 // Make sure to set the root element for the modal
 Modal.setAppElement('#root')
 
-export default function Address({ showAddress, setShowAddress }) {
-  //   const [isModalOpen, setIsModalOpen] = useState(false);
+export default function Address({ showAddress, setShowAddress ,selectedValues,setSelectedValues}) {
+
 
 //   const openModal = () => {
 //     // setIsModalOpen(true);
@@ -19,11 +20,12 @@ export default function Address({ showAddress, setShowAddress }) {
     setShowAddress(false)
   }
 
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     // Handle form submission here
-  //     openModal(); // Open the modal after successful submission
-  //   };
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      addCustomCake(selectedValues).then((res)=>res.json()).then((res)=>{
+        // After ordering redirecting code. Here
+      })
+    };
 
   return (
     <div className="acustom-cake-container">
@@ -33,7 +35,7 @@ export default function Address({ showAddress, setShowAddress }) {
         contentLabel="Address Modal"
       >
         <h2>Enter Customer's Address</h2>
-        <form className="form">
+        <div className="form">
           <div className="flex">
             <label>
               <input
@@ -43,6 +45,7 @@ export default function Address({ showAddress, setShowAddress }) {
                 id="email"
                 name="email"
                 className="input"
+                onChange={(e)=>  setSelectedValues((selectedValues) => ({...selectedValues,['email']: e.target.value}))}
               />
               <span>Email ID</span>
             </label>
@@ -95,10 +98,10 @@ export default function Address({ showAddress, setShowAddress }) {
             <span>City</span>
           </label>
 
-          <button className="btn btn-info" href="#">
-            <span className="text">submit</span>
+          <button className="btn btn-info" onClick={handleSubmit}>
+            <span className="text">Place Order</span>
           </button>
-        </form>
+        </div>
         {/* <form>
           <div className="aform-group">
             <label htmlFor="address">Address:</label>
@@ -115,9 +118,9 @@ export default function Address({ showAddress, setShowAddress }) {
       
           <button type="submit">Save Address</button>
         </form> */}
-        <button className="btn btn-secondary" onClick={closeModal}>
+        {/* <button className="btn btn-secondary" onClick={closeModal}>
           Place Order
-        </button>
+        </button> */}
       </Modal>
     </div>
   )

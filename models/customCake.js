@@ -4,7 +4,6 @@ const customCakeSchema = mongoose.Schema(
   {
     name: {
         type: String,
-        required: [true, "order name required"],
       },
       email: {
         type: String,
@@ -12,12 +11,11 @@ const customCakeSchema = mongoose.Schema(
       },
       phone: {
         type: String,
-        required: [true, "Phone Number is required"],
       },
       userid: {
         type: String,
       },
-      orderItems: [],
+      // orderItems: [],
       shippingAddress: {
         type: Object,
       },
@@ -25,31 +23,31 @@ const customCakeSchema = mongoose.Schema(
         type: String,
         //   required: true,
       },
-      cakedesign: {
+      cakeDesign: {
         type: String,
         //   required: true,
       },
-      color: {
+      cakeColor: {
         type: String,
         //   required: true,
       },
-      weight: {
+      cakeKg: {
         type: String,
         //   required: true,
       },
-      Flover: {
+      cakeFlover: {
         type: String,
         //   required: true,
       },
-      message: {
+      cakeMessage: {
         type: String,
         //   required: true,
       },
-      image: {
+      cakeImg: {
         type: String,
         //   required: true,
       },
-      discription: {
+      cakeDiscription: {
         type: String,
         //   required: true,
       },

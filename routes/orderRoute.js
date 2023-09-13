@@ -5,6 +5,7 @@ const stripe = require('stripe')(
   'sk_test_51NjEwGSBJhuyusNZYeVMCFKHebaPwB6yivlHef5GRBJ8goTXOC76cJIYZ2F6NY2k69d1d96EnLBr5accHAJ7ZtGD00wowX6YQa'
 )
 const Order = require('../models/orderModel')
+const customCake = require('../models/customCake')
 
 router.post('/placeorder', async (req, res) => {
   const { token, subTotal, currentUser, cartItems } = req.body
@@ -101,4 +102,20 @@ router.post('/deliverorder', async (req, res) => {
     })
   }
 })
+
+router.post('/customcake', async (req, res) => {
+    
+  try {
+    const newOrder = new customCake(req.body)
+    const result=await newOrder.save();
+
+    res.status(200).json({data:true})
+  } catch (error) {
+    res.status(400).json({
+      message: error.message,
+      error: error.stack,
+    })
+  }
+})
+
 module.exports = router

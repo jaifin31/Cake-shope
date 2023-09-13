@@ -33,6 +33,8 @@ export default function CustomCake() {
   const addressView =() =>{
     setShowAddress(true)
   }
+
+
   return (
     <div className="custom-cake-container">
       {(!showAddress)?
@@ -188,7 +190,10 @@ export default function CustomCake() {
                 <option value="option3">Choice Z</option>
               </select> */}
               <FileBase64
-               multiple={ true } />
+              type="file"
+              multiple={false}
+              onDone={({base64}) => setSelectedValues({ ...selectedValues,selectedFile:base64})}
+              />
                {/* onDone={ this.getFiles.bind(this) } */}
             </div>
             </div>
@@ -201,7 +206,7 @@ export default function CustomCake() {
       </div>
     </>
     :
-    <Address setShowAddress={setShowAddress} showAddress={showAddress}/>
+    <Address setShowAddress={setShowAddress} showAddress={showAddress} selectedValues={selectedValues} setSelectedValues={setSelectedValues}/>
       }
     </div>
   );
