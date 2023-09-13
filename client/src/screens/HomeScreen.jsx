@@ -26,7 +26,7 @@ const HomeScreen = ({setItem}) => {
     if(user!=null && user.isAdmin){
    //! navigate to /admin
    console.log("ITS ADMIN")
-    }
+    } 
   },[])
   return (
     <div>
