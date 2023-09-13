@@ -20,6 +20,14 @@ const HomeScreen = ({setItem}) => {
     dispatch(getAllPizzas());
   }, [dispatch]);
 
+  useEffect(()=>{
+    const user=JSON.parse(localStorage.getItem('currentUser'))
+    console.log(user)
+    if(user.isAdmin){
+   //! navigate to /admin
+   console.log("ITS ADMIN")
+    }
+  },[])
   return (
     <div>
       <Container>

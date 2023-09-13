@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import TopBar from './components/TopBar'
 import About from './components/About'
@@ -21,7 +21,14 @@ import Footer from './components/Footer'
 
 function App() {
   const [item, setItem] = useState([])
-
+useEffect(()=>{
+  const user=JSON.parse(localStorage.getItem('currentUser'))
+  console.log(user)
+  if(user.isAdmin){
+ //! navigate to /admin
+  }
+ 
+},[])
 
   return (
     <BrowserRouter>
