@@ -58,6 +58,7 @@ export default function Address({ showAddress, setShowAddress ,selectedValues,se
                 id="name"
                 name="name"
                 className="input"
+                onChange={(e)=>  setSelectedValues((selectedValues) => ({...selectedValues,['name']: e.target.value}))}
               />
               <span>Name</span>
             </label>
@@ -71,6 +72,8 @@ export default function Address({ showAddress, setShowAddress ,selectedValues,se
               id="address"
               name="address"
               className="input"
+              onChange={(e)=>  setSelectedValues((selectedValues) => ({...selectedValues,['shippingAddress']: e.target.value}))}
+
             />
             <span>Address</span>
           </label>
@@ -83,19 +86,10 @@ export default function Address({ showAddress, setShowAddress ,selectedValues,se
               id="pincode"
               name="pincode"
               className="input"
+              onChange={(e)=>  setSelectedValues((selectedValues) => ({...selectedValues,['phone']: e.target.value}))}
+
             />
-            <span>Pincode</span>
-          </label>
-          <label>
-            <input
-              required=""
-              type="tel"
-              placeholder=""
-              id="city"
-              name="city"
-              className="input"
-            />
-            <span>City</span>
+            <span>Phone</span>
           </label>
 
           <button className="btn btn-info" onClick={handleSubmit}>
