@@ -7,7 +7,10 @@ import OrderList from '../components/Admin/OrderList'
 import Pizzaslist from '../components/Admin/Pizzaslist'
 import Userlist from '../components/Admin/Userlist'
 import EditPizza from './../components/Admin/EditPizza'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/sidebar'
+import CustomOrder from '../components/Admin/CustomOrder'
+
+
 // import SalesGraph from '../components/Admin/SalesGraph'
 
 const AdminScreen = () => {
@@ -34,6 +37,7 @@ const AdminScreen = () => {
               <Route path="/admin/pizzalist" component={Pizzaslist} exact />
               <Route path="/admin/addnewpizza" component={AddNewPizza} exact />
               <Route path="/admin/orderlist" component={OrderList} exact />
+              <Route path="/admin/customorder" component={CustomOrder} exact />
               {/* <Route path="/admin/salesgraph" component={SalesGraph} exact /> */}
             </Switch>
 
