@@ -21,9 +21,9 @@ const HomeScreen = ({setItem}) => {
   }, [dispatch]);
 
   useEffect(()=>{
-    const user=JSON.parse(localStorage.getItem('currentUser'))
+    const user=JSON.parse(localStorage.getItem('currentUser')) || null
     console.log(user)
-    if(user.isAdmin){
+    if(user!=null && user.isAdmin){
    //! navigate to /admin
    console.log("ITS ADMIN")
     }

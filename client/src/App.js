@@ -22,9 +22,9 @@ import Footer from './components/Footer'
 function App() {
   const [item, setItem] = useState([])
 useEffect(()=>{
-  const user=JSON.parse(localStorage.getItem('currentUser'))
+  const user=JSON.parse(localStorage.getItem('currentUser')) || null
   console.log(user)
-  if(user.isAdmin){
+  if(user!=null && user.isAdmin){
  //! navigate to /admin
   }
  
