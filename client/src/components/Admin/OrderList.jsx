@@ -26,7 +26,7 @@ const OrderList = () => {
             <th>Amount</th>
             <th>Date</th>
             <th>Address</th>
-            <th>Message</th>
+            <th>Items</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -39,6 +39,13 @@ const OrderList = () => {
                 <td>{order.name}</td>
                 <td>Rs {order.orderAmount}/-</td>
                 <td>{order.createdAt.substring(0, 10)}</td>
+                <td>{order.orderItems.map((item)=>{
+                  return(
+                 <>  <p>Name:{item.name}</p>
+                    <p>Quantity:{item.quantity}</p>
+                    <p>Message:{item.message}</p></> 
+                  )
+                })}</td>
                 <td>
                   {order.shippingAddress.street}, {order.shippingAddress.city},<br/> 
                    {order.shippingAddress.picode}
