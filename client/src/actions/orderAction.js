@@ -81,3 +81,17 @@ export const addCustomCake = async(data) =>{
       console.log(error.message)
   }
 }
+export const viewCustomCake = async() =>{
+  try {
+    // const user=JSON.parse(localStorage.getItem('currentUser'))
+      return await fetch(`http://localhost:3000/api/orders/viewcustomcake`,{
+          method:"POST",
+          // body: JSON.stringify(data),
+          headers:{
+              "Content-Type":"application/json"
+          },
+      })
+  } catch (error) {
+      console.log(error.message)
+  }
+}

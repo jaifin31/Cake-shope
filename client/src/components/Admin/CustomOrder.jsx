@@ -1,22 +1,26 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { deliverOrder, getAllOrders } from './../../actions/orderAction'
+import { deliverOrder, getAllOrders, viewCustomCake } from './../../actions/orderAction'
 import { Table, Button } from 'react-bootstrap'
 import Loader from './../Loader'
 import Error from './../Error'
 const CustomOrder = () => {
-  const allOrdersState = useSelector((state) => state.allUserOrdersReducer)
-  const { loading, orders, error } = allOrdersState
+  // const allOrdersState = useSelector((state) => state.allUserOrdersReducer)
+  // const { loading, orders, error } = allOrdersState
+  const [orders,setOrders] = useState([])
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(getAllOrders())
-  }, [dispatch])
+    viewCustomCake().then((res)=>res.json()).then((res)=>{
+      // After ordering redirecting code. Here
+      setOrders([...res.data])
+    })
+  }, [])
   console.log(orders)
   return (
     <div>
       <h1>Order Lists</h1>
-      {loading && <Loader />}
-      {error && <Error error="Admin Order req fail" />}
+      {/* {loading && <Loader />} */}
+      {/* {error && <Error error="Admin Order req fail" />} */}
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -24,6 +28,7 @@ const CustomOrder = () => {
             <th>Email</th>
             <th>User Name</th>
             <th>Message</th>
+            <th>KG</th>
             <th>Date</th>
             <th>Cake Details</th>
             <th>Address</th>
@@ -37,11 +42,11 @@ const CustomOrder = () => {
                 <td>{order._id}</td>
                 <td>{order.email}</td>
                 <td>{order.name}</td>
-                <td>Rs {order.orderAmount}/-</td>
-                <td>{order.createdAt.substring(0, 10)}</td>
+                <td>{order.cakeMessage}</td>
+                <td>{order.cakeKg}</td>
+                {/* <td>{order.createdAt.substring(0, 10)}</td> */}
                 <td>
-                  {order.shippingAddress.street}, {order.shippingAddress.city},<br/> 
-                   {order.shippingAddress.picode}
+                  {order.shippingAddress}
                 </td>
                 <td>
                   {' '}

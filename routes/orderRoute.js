@@ -118,4 +118,19 @@ router.post('/customcake', async (req, res) => {
   }
 })
 
+router.post('/viewcustomcake', async (req, res) => {
+    
+  try {
+    // const newOrder = new customCake(req.body)
+    const result=await customCake.find({});
+
+    res.status(200).json({data:result})
+  } catch (error) {
+    res.status(400).json({
+      message: error.message,
+      error: error.stack,
+    })
+  }
+})
+
 module.exports = router
