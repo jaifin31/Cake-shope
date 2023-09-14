@@ -10,12 +10,13 @@ const ProductDetail = ({ item }) => {
  //  const [varient, setVarient] = useState(item[0].varients[0]) replace with your initial value
   const [varient, setVarient] = useState(item && item[0] && item[0].varients[0] ? item[0].varients[0] : ''); // replace with your initial value
   const [quantity, setQuantity] = useState(1)
+  const[message, setMessage] = useState('')
 
   const dispatch = useDispatch()
   const history = useHistory()
 
   const addToCartHandler = () => {
-    dispatch(addToCart(item[0], quantity, varient))
+    dispatch(addToCart(item[0], quantity, varient, message))
     alert('Item added to cart')
     history.push('/cart')
   }
@@ -243,9 +244,12 @@ const ProductDetail = ({ item }) => {
           <div className="weight-message">
             <input
               type="text"
+              id='message'
+              name='message'
               maxlength="25"
-              placeholder="Enter message on cake"
+              placeholder="Ex: Happy Birthday Rock"
               className="input-cakemessage"
+              onChange={(e)=> setMessage(e.target.value) }
             />
             <div className="message-length">25 Characters</div>
           </div>

@@ -81,3 +81,41 @@ const Login = () => {
 };
 
 export default Login;
+i want to add different cake flavers to the data nbase and diffrent 
+flavers has different rate or cost in if the user selecting the flavers the rate should be change dynamicaly
+ <div>
+              <Row>
+                <Col md={6}>
+                  <h6>Flavors</h6>
+                  {item && item[0] && item[0].varients && (
+                  <select
+                    className="form-select form-select-lg mb-3"
+                    aria-label=".form-select-lg example"
+                    value={varient}
+                    onChange={(e) => setVarient(e.target.value)}
+                  >
+                    {item[0].varients.map((varient) => (
+                      <option key={varient}>{varient}</option>
+                    ))}
+                  </select>
+                )}
+                </Col>
+                <Col md={6}>
+                  <h6>KG</h6>
+                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                    value={quantity}
+                    onChange={(e) => setQuantity(e.target.value)}
+                  >
+                    {[...Array(5).keys()].map((v, i) => (
+                      <option key={i + 1} value={i + 1}>
+                        {i + 1}
+                      </option>
+                    ))}
+                  </select>
+                </Col>
+              </Row>
+            </div>
+//in the above code you can see the dynamic changes the rate by changing the falvers in that only three flavers 
+are there and for that we have different rate it is with the detais of the cake. 
+i think it is difficut to add different flavers to each product so ve can creat a different document in the Mongodb 
+atlas and fetch that datas to the product details page. so tell me have can i do that in detail 

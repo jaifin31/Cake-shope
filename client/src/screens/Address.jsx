@@ -3,6 +3,8 @@ import Modal from 'react-modal' // Import the Modal component
 // import './CustomCake.css';
 import './Address.css'
 import { addCustomCake } from '../actions/orderAction';
+import { useHistory } from 'react-router-dom'
+
 
 // Make sure to set the root element for the modal
 Modal.setAppElement('#root')
@@ -14,7 +16,7 @@ export default function Address({ showAddress, setShowAddress ,selectedValues,se
 //     // setIsModalOpen(true);
 //     setShowAddress(true)
 //   }
-
+const history = useHistory()
   const closeModal = () => {
     // setIsModalOpen(false);
     setShowAddress(false)
@@ -24,6 +26,7 @@ export default function Address({ showAddress, setShowAddress ,selectedValues,se
       e.preventDefault();
       addCustomCake(selectedValues).then((res)=>res.json()).then((res)=>{
         // After ordering redirecting code. Here
+        history.push('/')
       })
     };
 

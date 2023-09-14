@@ -4,6 +4,7 @@ import Address from './Address';
 import FileBase64 from 'react-file-base64';
 
 
+
 export default function CustomCake() {
  
     // Define a state variable for the selected cake design
@@ -51,7 +52,7 @@ export default function CustomCake() {
               <label htmlFor="cakeDesign">Cake Design</label>
 
               <select id="cakeDesign" name="cakeDesign" className="form-select form-select-lg mb-3"
-                    aria-label=".form-select-lg example" value={selectedValues.cakeDesign} onChange={handleSelectChange}>
+                    aria-label=".form-select-lg example" value={selectedValues.cakeDesign} onChange={handleSelectChange} required="Messss">
                   <option>Select Here</option>
                   <option value="classic-birthday">Classic Birthday Cake</option>
                   <option value="chocolate-lovers">Chocolate Lover's Cake</option>
@@ -79,7 +80,7 @@ export default function CustomCake() {
               <label htmlFor="cakeColor">Color</label>
               <select id="cakeColor" name="cakeColor" className="form-select form-select-lg mb-3"
                     aria-label=".form-select-lg example" value={selectedValues.cakeColor} onChange={handleSelectChange}>
-                <option>Select Here</option>
+                <option value=''>Select Here</option>
                 <option value="classic-white">Classic White</option>
                 <option value="chocolate-brown">Chocolate Brown</option>
                 <option value="strawberry-red">Strawberry Red</option>

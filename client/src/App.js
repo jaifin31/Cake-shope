@@ -1,35 +1,34 @@
-import './App.css'
-import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import TopBar from './components/TopBar'
-import About from './components/About'
-import Contact from './components/Contact'
-import Policy from './components/Policy'
-import NavBar from './components/NavBar'
-import HomeScreen from './screens/HomeScreen'
-import CartScreen from './screens/CartScreen'
-import Registe from './screens/Registe'
-import Login from './screens/Login'
-import OrderScreen from './screens/OrderScreen'
-import AdminScreen from './screens/AdminScreen'
-import ProductDetail from './screens/ProductDetail'
-import CustomCake from './screens/CustomCake'
-import UserProfile from './screens/UserProfile'
-import Footer from './components/Footer'
-
-
+import './App.css';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import TopBar from './components/TopBar';
+import About from './components/About';
+import Contact from './components/Contact';
+import Policy from './components/Policy';
+import NavBar from './components/NavBar';
+import HomeScreen from './screens/HomeScreen';
+import CartScreen from './screens/CartScreen';
+import Registe from './screens/Registe';
+import Login from './screens/Login';
+import OrderScreen from './screens/OrderScreen';
+import AdminScreen from './screens/AdminScreen';
+import ProductDetail from './screens/ProductDetail';
+import CustomCake from './screens/CustomCake';
+import UserProfile from './screens/UserProfile';
+import Footer from './components/Footer';
 
 function App() {
-  const [item, setItem] = useState([])
-useEffect(()=>{
-  const user=JSON.parse(localStorage.getItem('currentUser')) || null
-  console.log(user)
-  if(user!=null && user.isAdmin){
- //! navigate to /admin
-  }
- 
-},[])
+  const [item, setItem] = useState([]);
 
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('currentUser')) || null;
+    console.log(user);
+    if (user != null && user.isAdmin) {
+      // Navigate to /admin
+    
+    }
+  }, []);
   return (
     <BrowserRouter>
        <TopBar /> 

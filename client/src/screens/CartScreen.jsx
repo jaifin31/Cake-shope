@@ -27,7 +27,7 @@ const CartScreen = () => {
                       Price : {item.quantity} X {item.prices[0][item.varient]} ={" "}
                       {item.price}
                     </h6>
-
+                    {item.message}
                     <h6>
                       Quantity :&nbsp;
                       <FaMinusCircle
@@ -35,7 +35,7 @@ const CartScreen = () => {
                         style={{ cursor: "pointer" }}
                         onClick={() => {
                           dispatch(
-                            addToCart(item, item.quantity - 1, item.varient)
+                            addToCart(item, item.quantity - 1, item.varient, item.message)
                           );
                         }}
                       />{" "}
@@ -46,7 +46,7 @@ const CartScreen = () => {
                         style={{ cursor: "pointer" }}
                         onClick={() => {
                           dispatch(
-                            addToCart(item, item.quantity + 1, item.varient)
+                            addToCart(item, item.quantity + 1, item.varient, item.message)
                           );
                         }}
                       />

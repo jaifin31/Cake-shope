@@ -7,13 +7,13 @@ import Pizza from "../components/Pizza";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import Filters from "../components/Filters";
-
+import { useHistory } from "react-router-dom";
 
 const HomeScreen = ({setItem}) => {
   const dispatch = useDispatch();
   const pizzastate = useSelector((state) => state.getAllPizzaReducer);
   const { loading, pizzas, error } = pizzastate;
-
+  const history = useHistory()
 
   // console.log(pizzas);
   useEffect(() => {
@@ -24,6 +24,7 @@ const HomeScreen = ({setItem}) => {
     const user=JSON.parse(localStorage.getItem('currentUser')) || null
     console.log(user)
     if(user!=null && user.isAdmin){
+       history.push('/admin')
    //! navigate to /admin
    console.log("ITS ADMIN")
     } 

@@ -23,8 +23,9 @@ const CustomOrder = () => {
             <th>Order Id</th>
             <th>Email</th>
             <th>User Name</th>
-            <th>Amount</th>
+            <th>Message</th>
             <th>Date</th>
+            <th>Cake Details</th>
             <th>Address</th>
             <th>Status</th>
           </tr>

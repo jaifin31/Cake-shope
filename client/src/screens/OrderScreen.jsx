@@ -26,7 +26,7 @@ const OrderScreen = () => {
                 {order.orderItems.map((item) => (
                   <h6 key={item.name}>
                     {item.name} [{item.varient}] * {item.quantity} ={' '}
-                    {item.price}
+                    {item.price} {item.message}
                   </h6>
                 ))}
               </Col>

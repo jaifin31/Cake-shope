@@ -26,6 +26,7 @@ const OrderList = () => {
             <th>Amount</th>
             <th>Date</th>
             <th>Address</th>
+            <th>Message</th>
             <th>Status</th>
           </tr>
         </thead>
