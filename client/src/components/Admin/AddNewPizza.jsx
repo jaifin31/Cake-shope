@@ -25,12 +25,7 @@ const AddNewPizza = () => {
       name,
       image,
       description,
-      category,
-      prices: {
-        small: smallPrice,
-        medium: mediumPrice,
-        larg: largprice,
-      },
+      category
     };
     dispatch(addPizza(pizza));
   };
@@ -50,37 +45,7 @@ const AddNewPizza = () => {
               placeholder="Enter email"
             />
           </Form.Group>
-          <Row className="mb-3 mt-3">
-            <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>Small Price</Form.Label>
-              <Form.Control
-                type="text"
-                value={smallPrice}
-                onChange={(e) => setsmallPrice(e.target.value)}
-                placeholder="Enter Small Price"
-              />
-            </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridState">
-              <Form.Label>Medium Price</Form.Label>
-              <Form.Control
-                type="text"
-                value={mediumPrice}
-                onChange={(e) => setmediumPrice(e.target.value)}
-                placeholder="Enter medium price"
-              />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Larg Price</Form.Label>
-              <Form.Control
-                type="text"
-                value={largprice}
-                onChange={(e) => setlargprice(e.target.value)}
-                placeholder="Enter larg price"
-              />
-            </Form.Group>
-          </Row>
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>Image</Form.Label>
             <Form.Control
