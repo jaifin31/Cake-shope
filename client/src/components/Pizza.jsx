@@ -115,11 +115,11 @@ const Pizza = ({ pizza, setItem }) => {
           <Card.Title className="cardName9title">{pizza.name}</Card.Title>
           <hr />
           
-          <Row>
+          {/* <Row>
             <Col md={6}>
               Normal Price: ₹{pizza.prices[0][varient] * quantity}/-
             </Col>
-          </Row>
+          </Row> */}
         </Card.Body>
       </div>
     </Card>

@@ -75,13 +75,13 @@ const NavBar = () => {
                     style={{ height: '25px' }}
                   />Orders</NavDropdown.Item>
                     </LinkContainer>
-                    <LinkContainer to="/userprofile">
+                    {/* <LinkContainer to="/userprofile">
                       <NavDropdown.Item> <img
                     src="images/pflogo.gif"
                     alt="Logo"
                     style={{ height: '25px' }}
                   />Your Profile</NavDropdown.Item>
-                    </LinkContainer>
+                    </LinkContainer> */}
                     <NavDropdown.Item
                       onClick={() => {
                         dispatch(logoutUser())

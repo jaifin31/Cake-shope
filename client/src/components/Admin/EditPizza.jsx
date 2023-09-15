@@ -67,7 +67,7 @@ const EditPizza = ({ match }) => {
               placeholder="Enter email"
             />
           </Form.Group>
-          <Row className="mb-3 mt-3">
+          {/* <Row className="mb-3 mt-3">
             <Form.Group as={Col} controlId="formGridCity">
               <Form.Label>Small Price</Form.Label>
               <Form.Control
@@ -97,7 +97,7 @@ const EditPizza = ({ match }) => {
                 placeholder="Enter larg price"
               />
             </Form.Group>
-          </Row>
+          </Row> */}
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>Image</Form.Label>
             <Form.Control

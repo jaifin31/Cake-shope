@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { deliverOrder, getAllOrders, viewCustomCake } from './../../actions/orderAction'
+import { useDispatch } from 'react-redux'
+import { deliverOrder, viewCustomCake } from './../../actions/orderAction'
 import { Table, Button } from 'react-bootstrap'
-import Loader from './../Loader'
-import Error from './../Error'
+
 const CustomOrder = () => {
   // const allOrdersState = useSelector((state) => state.allUserOrdersReducer)
   // const { loading, orders, error } = allOrdersState
@@ -29,10 +28,13 @@ const CustomOrder = () => {
             <th>User Name</th>
             <th>Message</th>
             <th>KG</th>
-            <th>Date</th>
-            <th>Cake Details</th>
-            <th>Address</th>
+            <th>Details</th>
+            <th>Image</th>
+            <th>Address</th>  
             <th>Status</th>
+            
+           
+
           </tr>
         </thead>
         <tbody>
@@ -44,6 +46,10 @@ const CustomOrder = () => {
                 <td>{order.name}</td>
                 <td>{order.cakeMessage}</td>
                 <td>{order.cakeKg}</td>
+                <td>Design: {order.cakeDesign}, Color: {order.cakeColor}, Description: {order.cakeDescription}</td>
+                <td>
+                  <img src={order.selectedFile} alt={order.name} style={{width:'100px',height:'100px'}}/>
+                </td>
                 {/* <td>{order.createdAt.substring(0, 10)}</td> */}
                 <td>
                   {order.shippingAddress}
