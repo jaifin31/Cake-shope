@@ -48,7 +48,7 @@ const CustomOrder = () => {
                 <td>{order.cakeKg}</td>
                 <td>Design: {order.cakeDesign}, Color: {order.cakeColor}, Description: {order.cakeDescription}</td>
                 <td>
-                  <img src={order.selectedFile} alt={order.name} style={{width:'100px',height:'100px'}}/>
+                  <img src={order.selectedFile} alt={order.name} style={{width:'200px',height:'200px'}}/>
                 </td>
                 {/* <td>{order.createdAt.substring(0, 10)}</td> */}
                 <td>
