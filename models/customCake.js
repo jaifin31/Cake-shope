@@ -43,11 +43,11 @@ const customCakeSchema = mongoose.Schema(
         type: String,
         //   required: true,
       },
-      cakeImg: {
+      selectedFile: {
         type: String,
         //   required: true,
       },
-      cakeDiscription: {
+      cakeDescription: {
         type: String,
         //   required: true,
       },

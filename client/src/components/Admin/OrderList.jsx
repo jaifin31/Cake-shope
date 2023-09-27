@@ -25,8 +25,8 @@ const OrderList = () => {
             <th>User Name</th>
             <th>Amount</th>
             <th>Date</th>
-            <th>Address</th>
             <th>Items</th>
+            <th>Address</th>
             <th>Status</th>
           </tr>
         </thead>

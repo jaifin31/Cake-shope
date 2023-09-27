@@ -28,7 +28,6 @@ const Pizzaslist = () => {
               <tr>
                 <th>Image</th>
                 <th>Cake Name</th>
-                <th>Prices</th>
                 <th>Category</th>
                 <th>Action</th>
               </tr>
@@ -46,13 +45,7 @@ const Pizzaslist = () => {
                       />
                     </td>
                     <td>{pizza.name}</td>
-                    <td>
-                      Small : {pizza.prices[0]["small"]}
-                      <br />
-                      Medium : {pizza.prices[0]["medium"]}
-                      <br />
-                      Large : {pizza.prices[0]["large"]}
-                    </td>
+                    
                     <td>{pizza.category}</td>
                     <td>
                       <Link to={`/admin/editpizza/${pizza._id}`}>

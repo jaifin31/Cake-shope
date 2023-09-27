@@ -2,42 +2,49 @@ import React, { useState } from 'react'
 import Modal from 'react-modal' // Import the Modal component
 // import './CustomCake.css';
 import './Address.css'
-import { addCustomCake } from '../actions/orderAction';
+import { addCustomCake } from '../actions/orderAction'
 import { useHistory } from 'react-router-dom'
-
 
 // Make sure to set the root element for the modal
 Modal.setAppElement('#root')
 
-export default function Address({ showAddress, setShowAddress ,selectedValues,setSelectedValues}) {
-
-
-//   const openModal = () => {
-//     // setIsModalOpen(true);
-//     setShowAddress(true)
-//   }
-const history = useHistory()
+export default function Address({
+  showAddress,
+  setShowAddress,
+  selectedValues,
+  setSelectedValues,
+}) {
+  //   const openModal = () => {
+  //     // setIsModalOpen(true);
+  //     setShowAddress(true)
+  //   }
+  const history = useHistory()
   const closeModal = () => {
     // setIsModalOpen(false);
     setShowAddress(false)
   }
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      addCustomCake(selectedValues).then((res)=>res.json()).then((res)=>{
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    addCustomCake(selectedValues)
+      .then((res) => res.json())
+      .then((res) => {
         // After ordering redirecting code. Here
-        history.push('/')
+        history.push('/')  
       })
-    };
+  alert('Order palced')
+  }
 
   return (
     <div className="acustom-cake-container">
+       
       <Modal
         isOpen={showAddress}
         onRequestClose={closeModal}
         contentLabel="Address Modal"
       >
         <h2>Enter Customer's Address</h2>
+        <p style={{color:'red'}}>Only Cash on Delivery Available</p>
         <div className="form">
           <div className="flex">
             <label>
@@ -48,7 +55,12 @@ const history = useHistory()
                 id="email"
                 name="email"
                 className="input"
-                onChange={(e)=>  setSelectedValues((selectedValues) => ({...selectedValues,['email']: e.target.value}))}
+                onChange={(e) =>
+                  setSelectedValues((selectedValues) => ({
+                    ...selectedValues,
+                    ['email']: e.target.value,
+                  }))
+                }
               />
               <span>Email ID</span>
             </label>
@@ -61,7 +73,12 @@ const history = useHistory()
                 id="name"
                 name="name"
                 className="input"
-                onChange={(e)=>  setSelectedValues((selectedValues) => ({...selectedValues,['name']: e.target.value}))}
+                onChange={(e) =>
+                  setSelectedValues((selectedValues) => ({
+                    ...selectedValues,
+                    ['name']: e.target.value,
+                  }))
+                }
               />
               <span>Name</span>
             </label>
@@ -75,8 +92,12 @@ const history = useHistory()
               id="address"
               name="address"
               className="input"
-              onChange={(e)=>  setSelectedValues((selectedValues) => ({...selectedValues,['shippingAddress']: e.target.value}))}
-
+              onChange={(e) =>
+                setSelectedValues((selectedValues) => ({
+                  ...selectedValues,
+                  ['shippingAddress']: e.target.value,
+                }))
+              }
             />
             <span>Address</span>
           </label>
@@ -89,8 +110,12 @@ const history = useHistory()
               id="pincode"
               name="pincode"
               className="input"
-              onChange={(e)=>  setSelectedValues((selectedValues) => ({...selectedValues,['phone']: e.target.value}))}
-
+              onChange={(e) =>
+                setSelectedValues((selectedValues) => ({
+                  ...selectedValues,
+                  ['phone']: e.target.value,
+                }))
+              }
             />
             <span>Phone</span>
           </label>
@@ -118,6 +143,7 @@ const history = useHistory()
         {/* <button className="btn btn-secondary" onClick={closeModal}>
           Place Order
         </button> */}
+       
       </Modal>
     </div>
   )

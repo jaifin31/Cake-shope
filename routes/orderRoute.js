@@ -108,7 +108,7 @@ router.post('/customcake', async (req, res) => {
   try {
     const newOrder = new customCake(req.body)
     const result=await newOrder.save();
-
+    console.log(req.body)
     res.status(200).json({data:true})
   } catch (error) {
     res.status(400).json({
